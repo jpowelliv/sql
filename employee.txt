@@ -1,0 +1,45 @@
+1.) How many objects are associated in relationship or have in common to that parent entity.  
+
+2.)  
+
+{ 
+
+   “ _id”: "<employees>", 
+
+   “ employees”: [ 
+
+{ 
+
+          {birth_date: 09/01/90, Title: "Associate", first_name: "Anthony", last_name: "Bennard", gender: "M", hire_date: "04/22/20", salary: 12.00, from_date: 04/22/22, to_date: 04/22/24}, 
+
+          {birth_date: 12/08/95, Title: "Manager", first_name: "Alicia", last_name: "Lyric", gender: "F", hire_date: "02/22/14", salary:24.50, from_date: 02/24/20, to_date: 02/24/24}, 
+
+          {birth_date: 01/01/00, Title: "Associate", first_name: "Macy", ", last_name: "Joy", gender: "F", hire_date: "10/30/20", salary: 10.00, from_date: 10/30/20, to_date: 11/1/22}, 
+
+          {birth_date: 11/25/85, Title: "Store Manager", first_name: "Bishop", ", last_name: "Stallion", gender: "M", hire_date: "08/25/"06, salary: 48.00, from_date: 08/25/18, to_date: 08/25/22}, 
+
+          {birt_date: 03/03/92, Title: "Manager", first_name: "Ashely", ", last_name: "Lane", gender: "F", hire_date: "06/30/15", salary: 34.50, from_date: 06/30/19, to_date: 06/30/23}, 
+
+        ] 
+
+} 
+
+{ 
+
+    _id: "departments", 
+
+    departments: [ 
+
+          {"Clothes"}, 
+
+          {"Jewelry"}, 
+
+          {"Miscellaneous"}, 
+
+          {"Furniture"}, 
+
+         ] 
+
+} 
+
+} 

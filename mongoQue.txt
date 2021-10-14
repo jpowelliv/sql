@@ -1,0 +1,21 @@
+1.Create a view showing the values of the product on hand.
++answer is not applicable
+//db.product.find({}, {_id: 0, qty: 1 }); // this shows quanity
+
+2. Select all the products and the category that the product is in.
+
+//want to see product name and category
+//db.product.find({}, {_id: 0, qt
+
+3.db.product.find({}, {name:1, category: 1}):
+
+4. db.product.find({}, {name:[1], category: [1], company [1], _id: 0});
+
+5. db.product.update({company: {$eq:"Stanley" }}, {$set: {company: "Stanley Black and Decker"}}, {multi:true});
+
+6. db.product.find({$and: [{category: {$eq:"Tools"}}, {price:{$gte:10.00}}]}, ///{_id: 0 , name: 1, category: 1, price: 1});
+//6a. db.product.find({$and: [{category: "Tools"}, {price:{$gte:10.00}}, {company:"Stanley Black and Decker"}]},
+{_id: 0 , name: 1, category: 1, price: 1});
+
+7. db.product.remove({company: "Crest"});
+yes, but it will be better to UPDATE or delete all of the documents *ref something integrity

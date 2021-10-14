@@ -1,0 +1,21 @@
+Q1: db.employees.aggregate([ {$group: { _id: "$birth_date", count: { $sum: 1 } }}, {$sort: {count: -1}}, {$limit: 10}])
+
+
+
+Q2: db,employees.aggregate([ {$group:{_id:["$emp_no", "$first_name", "$last_name", "$salaries", count: {$sum: 1 } }}, {$sort: {$count: -1}}, {$limit: 10}])
+
+
+
+Q3: db.salaries,employees .find({"$where": "this.employees.emp_no == this. salaries.emp_no"},{"Avg(salaries.salary)": 1})
+
+
+
+Q4:
+
+db.salaries,employees .find({
+
+"$and": [{
+"$where": "this.employees.emp_no == this. salaries.emp_no "}, { "$where": "this. salaries.salary > this. (SELECT Avg(s.salary) FROM salaries s, employees e WHERE e.emp_no = s.emp_no) "}]}, {"employees.emp_no": 1,
+"employees.first_name": 1,
+"employees.last_name": 1,
+"salaries.salary": 1}).sort({"salaries.salary, employees.emp_no": 1});

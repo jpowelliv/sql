@@ -1,0 +1,8 @@
+> db.students.find({"classes.days": {$eq: "Thursday"}});
+{ "_id" : ObjectId("5e5d2b6aa4028f58eac5f6de"), "name" : "Alice", "dorm" : { "name" : "Olive", "room" : "323" }, "classes" : [ { "name" : "Databases", "days" : [ "Monday", "Wednesday" ], "credits" : 3 }, { "name" : "Advanced Databases", "days" : [ "Tuesday", "Thursday" ], "credits" : 3 } ] }
+>
+> db.students.update({_id:12345}, {age:45});
+WriteResult({ "nMatched" : 0, "nUpserted" : 0, "nModified" : 0 })
+> db.students.find({"dorm.name": {$eq: "Rice Hall"}});
+{ "_id" : ObjectId("5e5d2ba3a4028f58eac5f6e1"), "name" : "Mason", "dorm" : { "name" : "Rice Hall", "room" : "206" }, "classes" : [ { "name" : "Biology", "days" : [ "Monday", "Wednesday", "Friday" ], "credits" : 4 }, { "name" : "Speech", "days" : [ "Monday", "Wednesday", "Friday" ], "credits" : 3 } ] }
+{ "_id" : ObjectId("5e5d2ba9a4028f58eac5f6e2"), "name" : "Mason", "dorm" : { "name" : "Rice Hall", "room" : "206" }, "classes" : [ { "name" : "Biology", "days" : [ "Monday", "Wednesday", "Friday" ], "credits" : 4 }, { "name" : "Speech", "days" : [ "Monday", "Wednesday", "Friday" ], "credits" : 3 } ] }

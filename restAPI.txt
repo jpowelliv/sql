@@ -1,0 +1,95 @@
+const express = require('express');
+const app = express();
+app.get('/', function(require, response) {
+resp.sendFile(__dirname + "/gameRestAPI.html");
+});
+
+// GET all avatars
+app.get('/avatars', function(require, response) {
+const dataBack = {data: "Test GET avatars"};
+resp.send(dataBack);
+});
+
+// GET avatar name
+app.get('/avatars/:avatarID/username', function(require, response) {
+const dataBack = {data: "Test GET avatars username"};
+resp.send(dataBack);
+});
+
+// GET avatar stats
+app.get('/avatars/:avatarID/stats', function(require,response) {
+const dataBack = {data: "Test GET avatars stats"};
+resp.send(dataBack);
+});
+
+// GET avatar bags
+app.get('/avatars/:avatarID/bags', function(require, response) {
+const dataBack = {data: "Test GET avatars bags (inventory)"};
+resp.send(dataBack);
+});
+
+// GET avatar location
+app.get('/avatars/:avatarID/location', function(require, response) {
+const dataBack = {data: "Test GET avatars location"};
+resp.send(dataBack);
+});
+
+// UPDATE avatar name
+app.put('/avatars/:avatarID/username', function(require, response) {
+const dataBack = {data: "Test PUT avatars username"};
+resp.send(dataBack);
+});
+
+// UPDATE avatar attributes
+app.put('/avatars/:avatarID/stats', function(require, response) {
+const dataBack = {data: "Testing PUT avatars attributes"};
+resp.send(dataBack);
+});
+
+// UPDATE avatar bags
+app.put('/avatars/:characterID/bags', function(require, response) {
+const dataBack = {data: "Test PUT avatars bags (inventory)"};
+resp.send(dataBack);
+});
+
+// UPDATE avatar location
+app.put('/avatars/:avatarID/location', function(require, response) {
+const dataBack = {data: "Test PUT avatars location"};
+resp.send(dataBack);
+});
+
+// CREATE avatar
+app.post('/avatars/:avatarID', function(require, response) {
+const dataBack = {data: "Test POST avatars"};
+resp.send(dataBack);
+});
+
+// GET power info
+app.get('/powers/:powerID', function(require, response) {
+const dataBack = {data: "Test GET powers"};
+resp.send(dataBack);
+});
+
+// UPDATE power info
+app.put('/powers/:power', function(require, response) {
+const dataBack = {data: "Test PUT powers"};
+resp.send(dataBack);
+});
+
+// CREATE power
+app.post('/powers/:powerID', function(require, response) {
+const dataBack = {data: "Test POST powers"};
+resp.send(dataBack);
+});
+
+// DELETE power
+app.delete('/powers/:powerID', function(require, response) {
+const dataBack = {data: "Test REMOVE powers"};
+resp.send(dataBack);
+});
+
+// DELETE avatar
+app.delete('avatars/:avatarID', function(require, response) {
+const dataBack = {data: "Test DELETE avatars"};
+resp.send(dataBack);
+});
